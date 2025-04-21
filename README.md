@@ -21,14 +21,7 @@ Using different set of MCP servers is something common when you use public & pri
 ## How to use
 
 ```bash
-sdk install jbang
 cat ~/.cursor/mcp.json
-jbang ./src/main/java/info/jab/jbang/CursorMCPConfig.java
-jbang ./src/main/java/info/jab/jbang/CursorMCPConfig.java --help
-jbang ./src/main/java/info/jab/jbang/CursorMCPConfig.java --show
-jbang ./src/main/java/info/jab/jbang/CursorMCPConfig.java --backup
-jbang ./src/main/java/info/jab/jbang/CursorMCPConfig.java --replace examples/mcp0.json
-jbang ./src/main/java/info/jab/jbang/CursorMCPConfig.java --replace examples/mcp1.json
 
 ./mvnw clean package
 java -jar target/cursor-mcp-config-0.1.0.jar
@@ -37,6 +30,26 @@ java -jar target/cursor-mcp-config-0.1.0.jar --show
 java -jar target/cursor-mcp-config-0.1.0.jar --backup
 java -jar target/cursor-mcp-config-0.1.0.jar --replace examples/mcp0.json
 java -jar target/cursor-mcp-config-0.1.0.jar --replace examples/mcp1.json
+
+sdk install jbang
+
+jbang ./src/main/java/info/jab/jbang/CursorMCPConfig.java
+jbang ./src/main/java/info/jab/jbang/CursorMCPConfig.java --help
+jbang ./src/main/java/info/jab/jbang/CursorMCPConfig.java --show
+jbang ./src/main/java/info/jab/jbang/CursorMCPConfig.java --backup
+jbang ./src/main/java/info/jab/jbang/CursorMCPConfig.java --replace examples/mcp0.json
+jbang ./src/main/java/info/jab/jbang/CursorMCPConfig.java --replace examples/mcp1.json
+
+sdk install jbang
+
+jbang cache clear
+jbang catalog list jabrena
+jbang cursor-mcp-config@jabrena 
+jbang cursor-mcp-config@jabrena --help
+jbang cursor-mcp-config@jabrena --show
+jbang cursor-mcp-config@jabrena --backup
+jbang cursor-mcp-config@jabrena --replace examples/mcp0.json
+jbang cursor-mcp-config@jabrena --replace examples/mcp1.json
 ```
 
 ## References
